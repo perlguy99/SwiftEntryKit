@@ -103,12 +103,12 @@ public struct EKProperty {
         
         /** Quick thumbail property generator */
         public static func thumb(with image: UIImage, edgeSize: CGFloat) -> ImageContent {
-            return ImageContent(image: image, size: CGSize(width: edgeSize, height: edgeSize), contentMode: .scaleAspectFill, makeRound: true)
+            return ImageContent(image: image, size: CGSize(width: edgeSize, height: edgeSize), contentMode: .scaleAspectFill, makeRound: true, tintColor: UIColor? = nil)
         }
         
         /** Quick thumbail property generator */
         public static func thumb(with imageName: String, edgeSize: CGFloat) -> ImageContent {
-            return ImageContent(imageName: imageName, size: CGSize(width: edgeSize, height: edgeSize), contentMode: .scaleAspectFill, makeRound: true)
+            return ImageContent(imageName: imageName, size: CGSize(width: edgeSize, height: edgeSize), contentMode: .scaleAspectFill, makeRound: true, tintColor: UIColor? = nil)
         }
     }
     
