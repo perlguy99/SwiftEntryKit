@@ -32,7 +32,7 @@ public struct EKPopUpMessage {
         public var position: Position
         
         /** Initializer */
-        public init(image: EKProperty.ImageContent, position: Position = .topToTop(offset: 40), tintColor: UIColor = nil) {
+        public init(image: EKProperty.ImageContent, position: Position = .topToTop(offset: 40), tintColor: UIColor? = nil) {
             self.image     = image
             self.position  = position
             self.tintColor = tintColor
