@@ -83,23 +83,17 @@ public struct EKProperty {
         /** Content mode */
         public var contentMode: UIViewContentMode
         
-        /** Tint Color */
-        public var tintColor: UIColor?
-        
         /** Shuld the image can rounded */
         public var makeRound: Bool
     
-        public init(image: UIImage, size: CGSize? = nil, contentMode: UIViewContentMode = .scaleToFill, makeRound: Bool = false, tintColor: UIColor? = nil) {
+        public init(image: UIImage, size: CGSize? = nil, contentMode: UIViewContentMode = .scaleToFill, makeRound: Bool = false) {
             self.image       = image
             self.size        = size
             self.contentMode = contentMode
             self.makeRound   = makeRound
-            self.tintColor   = tintColor
-            
-            self.tintColor = UIColor.orange
         }
         
-        public init(imageName: String, size: CGSize? = nil, contentMode: UIViewContentMode = .scaleToFill, makeRound: Bool = false, tintColor: UIColor? = nil) {
+        public init(imageName: String, size: CGSize? = nil, contentMode: UIViewContentMode = .scaleToFill, makeRound: Bool = false) {
             self.init(image: UIImage(named: imageName)!, size: size, contentMode: contentMode, makeRound: makeRound, tintColor: tintColor)
         }
         
