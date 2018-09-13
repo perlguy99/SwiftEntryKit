@@ -46,6 +46,7 @@ public class EKPopUpMessageView: UIView {
             imageView.layoutToSuperview(.top, offset: value)
         }
         imageView.imageContent = themeImage.image
+        imageView.tintColor = themeImage.tintColor
     }
     
     private func setupTitleLabel() {

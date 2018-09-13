@@ -189,7 +189,7 @@ class PresetsViewController: UIViewController {
         var themeImage: EKPopUpMessage.ThemeImage?
         
         if let image = image {
-            themeImage = .init(image: .init(image: image, size: CGSize(width: 60, height: 60), contentMode: .scaleAspectFit))
+            themeImage = .init(image: .init(image: image, size: CGSize(width: 60, height: 60), contentMode: .scaleAspectFit, tintColor: UIColor.brown))
         }
         
         let title = EKProperty.LabelContent(text: title, style: .init(font: MainFont.medium.with(size: 24), color: titleColor, alignment: .center))

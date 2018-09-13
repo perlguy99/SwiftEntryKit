@@ -22,6 +22,9 @@ public struct EKPopUpMessage {
             case centerToTop(offset: CGFloat)
         }
         
+        /** The color of the image */
+        public var tintColor: UIColor?
+
         /** The content of the image */
         public var image: EKProperty.ImageContent
         
@@ -29,9 +32,10 @@ public struct EKPopUpMessage {
         public var position: Position
         
         /** Initializer */
-        public init(image: EKProperty.ImageContent, position: Position = .topToTop(offset: 40)) {
-            self.image = image
-            self.position = position
+        public init(image: EKProperty.ImageContent, position: Position = .topToTop(offset: 40), tintColor: UIColor = nil) {
+            self.image     = image
+            self.position  = position
+            self.tintColor = tintColor
         }
     }
     
