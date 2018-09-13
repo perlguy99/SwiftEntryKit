@@ -90,11 +90,13 @@ public struct EKProperty {
         public var makeRound: Bool
     
         public init(image: UIImage, size: CGSize? = nil, contentMode: UIViewContentMode = .scaleToFill, makeRound: Bool = false, tintColor: UIColor? = nil) {
-            self.image = image
-            self.size = size
+            self.image       = image
+            self.size        = size
             self.contentMode = contentMode
-            self.makeRound = makeRound
-            self.tintColor = tintColor
+            self.makeRound   = makeRound
+            self.tintColor   = tintColor
+            
+            self.tintColor = UIColor.orange
         }
         
         public init(imageName: String, size: CGSize? = nil, contentMode: UIViewContentMode = .scaleToFill, makeRound: Bool = false, tintColor: UIColor? = nil) {
@@ -103,12 +105,12 @@ public struct EKProperty {
         
         /** Quick thumbail property generator */
         public static func thumb(with image: UIImage, edgeSize: CGFloat) -> ImageContent {
-            return ImageContent(image: image, size: CGSize(width: edgeSize, height: edgeSize), contentMode: .scaleAspectFill, makeRound: true, tintColor: UIColor? = nil)
+            return ImageContent(image: image, size: CGSize(width: edgeSize, height: edgeSize), contentMode: .scaleAspectFill, makeRound: true)
         }
         
         /** Quick thumbail property generator */
         public static func thumb(with imageName: String, edgeSize: CGFloat) -> ImageContent {
-            return ImageContent(imageName: imageName, size: CGSize(width: edgeSize, height: edgeSize), contentMode: .scaleAspectFill, makeRound: true, tintColor: UIColor? = nil)
+            return ImageContent(imageName: imageName, size: CGSize(width: edgeSize, height: edgeSize), contentMode: .scaleAspectFill, makeRound: true)
         }
     }
     
